@@ -1,0 +1,30 @@
+﻿<Window x:Class="PortalVideojuegos.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inicio de sesión" Height="340" Width="380"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="30">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="Catálogo de Videojuegos" FontSize="18"
+                       FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Usuario" Margin="0,0,0,3"/>
+            <TextBox x:Name="TxtUsuario" Height="28" Margin="0,0,0,10"
+                     VerticalContentAlignment="Center"/>
+
+            <TextBlock Text="Contraseña" Margin="0,0,0,3"/>
+            <PasswordBox x:Name="TxtPassword" Height="28" Margin="0,0,0,10"
+                         VerticalContentAlignment="Center"/>
+
+            <TextBlock x:Name="LblMensaje" Height="35" TextWrapping="Wrap"
+                       HorizontalAlignment="Center" TextAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="BtnLogin" Content="Login" Width="100" Height="30"
+                        Margin="5" IsDefault="True" Click="BtnLogin_Click"/>
+                <Button x:Name="BtnSalir" Content="Salir" Width="100" Height="30"
+                        Margin="5" Click="BtnSalir_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,73 @@
+﻿<Window x:Class="PortalVideojuegos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Portal de Videojuegos - Home" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <!-- Cabecera -->
+            <RowDefinition Height="40"/>
+            <!-- Menú superior -->
+            <RowDefinition Height="*"/>
+            <!-- Cuerpo -->
+        </Grid.RowDefinitions>
+
+        <!-- ZONA 1: Cabecera -->
+        <DockPanel Grid.Row="0">
+            <Button x:Name="BtnCerrarSesion" Content="Cerrar sesión" DockPanel.Dock="Right"
+                    Width="100" Height="25" VerticalAlignment="Top" Margin="5,0,0,0"
+                    Click="BtnCerrarSesion_Click"/>
+            <Button Content="mi perfil" DockPanel.Dock="Right"
+                    Width="80" Height="25" VerticalAlignment="Top"/>
+            <TextBlock x:Name="TxtBienvenida" VerticalAlignment="Center" FontWeight="Bold"/>
+        </DockPanel>
+
+        <!-- ZONA 2: Menú superior -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="TIENDA" Width="90" Margin="5,0"/>
+            <Button Content="COMUNIDAD" Width="90" Margin="5,0"/>
+            <Button Content="SOPORTE" Width="90" Margin="5,0"/>
+        </StackPanel>
+
+        <!-- ZONA 3: Cuerpo -->
+        <Grid Grid.Row="2" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Menú lateral con esquinas redondeadas -->
+            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1"
+                    CornerRadius="20" Margin="10" Padding="15">
+                <StackPanel>
+                    <Button Content="Destacados" Height="30" Margin="0,10"/>
+                    <Button Content="Mis juegos" Height="30" Margin="0,10"/>
+                    <Button Content="Configuración" Height="30" Margin="0,10"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Zona de juegos -->
+            <GroupBox Grid.Column="1" Header="Juegos" Margin="10">
+                <WrapPanel Margin="10">
+                    <Border Width="120" Height="120" BorderBrush="Black"
+                            BorderThickness="1" Margin="10">
+                        <TextBlock Text="JUEGO" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Width="120" Height="120" BorderBrush="Black"
+                            BorderThickness="1" Margin="10">
+                        <TextBlock Text="JUEGO" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Width="120" Height="120" BorderBrush="Black"
+                            BorderThickness="1" Margin="10">
+                        <TextBlock Text="JUEGO" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Border>
+                </WrapPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>
